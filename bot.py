@@ -14,7 +14,7 @@ async def forward_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Отправляем уведомление с именем
     await context.bot.send_message(chat_id=f"@{ADMIN_USERNAME}", text=text)
 
-app = ApplicationBuilder().token(BOT_TOKEN).build()
+app = ApplicationBuilder().token(8689837582:AAFjWKXzdVznU5awVfThbYunwx_rYitWkwU).build()
 app.add_handler(MessageHandler(filters.ALL, forward_message))
 
 print("Бот запущен 🚀")
