@@ -3,7 +3,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
 BOT_TOKEN = "8689837582:AAFjWKXzdVznU5awVfThbYunwx_rYitWkwU"
-ADMIN_ID = int(os.environ["ADMIN_ID"])
+ADMIN_ID = "Geoplatform"  # твой Telegram @username
 
 WELCOME_TEXT = """
 MRPL Club — знакомства в Мариуполе ❤️
