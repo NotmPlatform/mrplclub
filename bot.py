@@ -2,7 +2,7 @@ import os
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
-BOT_TOKEN = os.getenv["BOT_TOKEN"]
+BOT_TOKEN = "8689837582:AAFjWKXzdVznU5awVfThbYunwx_rYitWkwU"
 ADMIN_ID = int(os.getenv("ADMIN_ID", "7964857997"))
 
 WELCOME_TEXT = """
