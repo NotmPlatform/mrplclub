@@ -163,7 +163,7 @@ async def start_menu_handler(update: Update, context: ContextTypes.DEFAULT_TYPE)
         await update.message.reply_text(
             "Пожалуйста, нажмите кнопку «Начать анкету».",
             reply_markup=start_keyboard()
-            )
+        )
         return START_MENU
 
     await update.message.reply_text(
@@ -309,7 +309,8 @@ async def get_phone(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if is_editing(context, "phone"):
         clear_edit_mode(context)
         return await show_summary(update, context)
-        await update.message.reply_text("Введите желаемый возраст партнера: от")
+
+    await update.message.reply_text("Введите желаемый возраст партнера: от")
     return PARTNER_AGE_FROM
 
 
@@ -424,7 +425,7 @@ async def edit_field(update: Update, context: ContextTypes.DEFAULT_TYPE):
         set_edit_mode(context, "name")
         await update.message.reply_text(
             "Введите новое имя:",
-        reply_markup=ReplyKeyboardRemove()
+            reply_markup=ReplyKeyboardRemove()
         )
         return NAME
 
@@ -501,7 +502,6 @@ def main():
     conv_handler = ConversationHandler(
         entry_points=[
             CommandHandler("start", start),
-            MessageHandler(filters.Regex("^Начать анкету$"), start_menu_handler),
         ],
         states={
             START_MENU: [
